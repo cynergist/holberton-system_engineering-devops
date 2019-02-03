@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Ac" | tr 'A' 'Z' | tr 'c' 'z'
+tr 'A' 'Z' | tr 'c' 'z'
