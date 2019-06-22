@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script displays contents of current directtory
+# in a list format
+# Where part of the name after dash is displayed
+# for-loop use; do not display hidden files
+
+for i in *
+do
+    echo "$i" | cut -d "-" -f2
+done
