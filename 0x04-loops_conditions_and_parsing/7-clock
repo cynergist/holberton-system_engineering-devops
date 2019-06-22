@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script displays time for 12hh 59min
+# displays hours from 0-12; min from 1-59
+# while-loop with case statement
+
+i=0
+while [ $i -le 12 ]
+do
+    echo "Hour: $i"
+    j=1
+	while [ $j -le 59 ]
+	do
+	    echo "$j"
+	    ((j++))
+	done
+((i++))
+done
