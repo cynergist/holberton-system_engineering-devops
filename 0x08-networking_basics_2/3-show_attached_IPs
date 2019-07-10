@@ -3,7 +3,8 @@
 
 function display_ipv4
 {
-ifconfig | grep -m10 "inet addr" | cut -d ':' -f2 | cut -d ' ' -f1
+    #Match only 'inet addr' of ifconfig ouput, cut at delimeters: fields 1 & 2
+    ifconfig | grep "inet addr" | cut -d ':' -f2 | cut -d ' ' -f1
 }
 
 display_ipv4
