@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#Bash script that pings an IP address passed as an argument adapted from
+#"Coding For Penetration Testers" book via unixmen.com
+host=$1
+function pingfive
+{
+	ping="ping -c 5 $host"
+	if [ -z "$host" ]; then
+	    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+	    exit 1
+	else $ping;
+	    exit 0
+	fi
+}
+
+pingfive
