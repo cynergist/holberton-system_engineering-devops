@@ -87,9 +87,12 @@ Here are 3 of them:
 - 443 for HTTPS
 
 Note: A socket address is an IP address & port number.
-```123.132.213.231         # IP address
+
+```
+123.132.213.231         # IP address
                :1234    # port number
-123.132.213.231:1234    # socket address```
+123.132.213.231:1234    # socket address
+```
 
 5. 5-is_the_host_on_the_network // a Bash script that pings an IP address passed as an argument.
 - Accepts a string as an argument
