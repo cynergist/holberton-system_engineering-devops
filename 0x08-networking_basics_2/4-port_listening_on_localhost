@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#Script listens on port 98 localhost
+
+function listen
+{
+    # nc - arbitrary TCP and UDP connections and listens
+    # -l - nc should listen for an incoming connection
+    # (1) nc (2) flags (3) host to listen on (4) port number
+    nc -l localhost 98
+}
+
+listen
