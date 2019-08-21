@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Install nginx web server and return a page that contains
 # the string "Holberton School"
-sudo apt-get -y update
-sudo apt-get -y install nginx
-echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+apt-get -y update
+apt-get -y install nginx
+echo "Holberton School" > /usr/share/nginx/html/index.html
+sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
 service nginx start
