@@ -3,6 +3,6 @@
 # the string "Holberton School"
 apt-get -y update
 apt-get -y install nginx
-echo "Holberton School" > /usr/share/nginx/html/index.html
-sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
-service nginx start
+ufw allow 'Nginx HTTP'
+echo "Holberton School" > /var/www/html/index.html
+service nginx restart
