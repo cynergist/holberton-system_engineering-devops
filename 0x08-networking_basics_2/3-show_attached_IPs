@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Script displays all active IPv4 IPs on the machine
+
+function display_ipv4
+{
+    #Match only 'inet addr' of ifconfig ouput, cut at delimeters: fields 1 & 2
+    ifconfig | grep "inet addr" | cut -d ':' -f2 | cut -d ' ' -f1
+}
+
+display_ipv4

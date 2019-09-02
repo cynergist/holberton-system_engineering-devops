@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script transfers a file from our client to a server using 4 parameters
+# Syntax: scp <file to upload> <username>@<hostname>:<destination path>
+
+FILE="$1"
+PATH_TO_FILE="$2"
+IP="$3"
+USERNAME="$4"
+
+if [[ $# -lt 3 ]]; then
+    echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+else
+    scp -o StrictHostKeyChecking=no -i "$USERNAME" "$FILE" "$IP@$PATH_TO_FILE":~/
+fi

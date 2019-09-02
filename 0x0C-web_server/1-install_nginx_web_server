@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Install nginx web server and return a page that contains
+# the string "Holberton School"
+apt-get -y update
+apt-get -y install nginx
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+service nginx start

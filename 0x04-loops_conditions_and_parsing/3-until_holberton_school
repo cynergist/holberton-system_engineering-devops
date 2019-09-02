@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script displays "Holberton School" 10 times
+# until-loop with TESTCOMMAND
+
+i="0"
+
+until [ $i == 10 ]
+do
+	echo "Holberton School"
+	i=$((i+1))
+done

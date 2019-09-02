@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Kills the process "To infinity and beyond" without `kill` or `killall`
+skill -u vagrant

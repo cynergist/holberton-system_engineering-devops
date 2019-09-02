@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Script displays listening ports showing listening sockets.
+#Execute in sudo to display PID/Program details.
+netstat -pl

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# a Bash script that configures SSH client so that it can connect to a server without typing a password
+ssh ubuntu@35.229.125.98 -i ~/.ssh/holberton
