@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
 # Script creates .tgz archive file of all databases
-
-# execute mysqldump first argument is password in command line
-# --opt is enabled by default
-mysqldump -u root -p"$1" --opt --all-databases > backup.sql
-
-tar -czf "$(date + %d-%m-%Y)".tar.gz backup.sql
+mysqldump -u root -p$1 --opt --all-databases > backup.sql
+tar -czf $(date + %d-%m-%Y).tar.gz backup.sql
