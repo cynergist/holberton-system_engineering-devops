@@ -3,6 +3,6 @@
 
 # execute mysqldump first argument is password in command line
 # --opt is enabled by default
-mysqldump -u root -p$1 --all-databases > backup.sql
+mysqldump -u root -p"$1" --opt --all-databases > backup.sql
 
-tar -cvf $(date + %d-%m-%Y).tar.gz backup.sql
+tar -czfv "$(date + %d-%m-%Y)".tar.gz backup.sql
