@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 # Script creates .tgz archive file of all databases
-DATE = date +"%m-%d-%Y"
 
-echo "[`DATE`] Execute mysql dump >>>>>>>>>>>>>>"
-mysqldump -u root -proot --all-databases > backup.sql
+# execute mysqldump first argument is password in command line
+# --opt is enabled by default
+mysqldump -u root -p$1 --all-databases > backup.sql
 
-echo "[`DATE`] Compressing backup..."
-tar -czvf $DATE.tar.gz ../../backup.sql
+tar -cvf $(date + %d-%m-%Y).tar.gz backup.sql
