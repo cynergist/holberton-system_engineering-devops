@@ -20,6 +20,8 @@ if __name__ == "__main__":
     todo_id = argv[1]
     todos_r = requests.get(todos_url + todo_id)
     todos = todos_r.json()
+    if not user or not todos:
+        print("Not a valid JSON")
     '''Search for 'completed' key, add 'title' of the todo to our todo_list'''
     for everything in todos:
         if everything.get('completed'):
